@@ -3,14 +3,16 @@
 
 class Pages extends Controller
 {
+
     public  function __construct()
     {
         //
     }
 
+
     public  function index()
     {
-        $data = ['title' => 'Home Page'];
+        $data = ['title' => 'Welcome to home page'];
         $this->view('pages/index', $data);
     }
 
@@ -19,5 +21,4 @@ class Pages extends Controller
     {
         echo 'pages about loaded'. $param;
     }
-
 }
