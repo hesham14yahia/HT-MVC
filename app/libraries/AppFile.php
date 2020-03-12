@@ -7,10 +7,10 @@
     {
 
         // return file path for controllers models and views or any class in app folder
-        function path($type, $name, $use_ucwords_fun = false)
+        function path($directory, $name, $use_ucwords_fun = false)
         {
-            return !$use_ucwords_fun ? '../app/'. $type . '/' . ucwords($name) . '.php' :
-                '../app/'. $type . '/' . $name . '.php';
+            return !$use_ucwords_fun ? '../app/'. $directory . '/' . ucwords($name) . '.php' :
+                '../app/'. $directory . '/' . $name . '.php';
         }
 
         // view doesn't exist
