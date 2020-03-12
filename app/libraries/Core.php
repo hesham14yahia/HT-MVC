@@ -6,7 +6,7 @@
      * URL FORMAT - /controller/method/params
      */
 
-    class Core {
+    class Core extends AppFile {
 
         // if there isn't any controllers load pages controller
         protected  $currentController = 'Pages';
@@ -25,7 +25,7 @@
             $controllerName = ucwords($url[0]);
 
             // check if there is a controller matches the controller named in url
-            if(file_exists($this->controllerPath($controllerName))){
+            if(file_exists($this->path('controllers' ,$controllerName))){
 
                 // if exists, set controller name as current controller
                 $this->currentController = $controllerName;
@@ -35,7 +35,7 @@
             }
 
             // require the controller
-            require_once $this->controllerPath($this->currentController);
+            require_once $this->path('controllers' ,$this->currentController);
 
             // Instantiate controller class
             $this->currentController = new $this->currentController;
@@ -77,12 +77,6 @@
                 $url = explode('/', $url);
                 return $url;
             }
-        }
-
-        // takes controller name with first litter uppercase and return controller full path
-        protected function controllerPath($controllerName)
-        {
-            return '../app/controllers/' . $controllerName . '.php';
         }
 
     }
