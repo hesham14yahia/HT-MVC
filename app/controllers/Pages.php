@@ -12,7 +12,7 @@ class Pages extends Controller
 
     public  function index()
     {
-        $data = ['title' => 'Welcome to home page'];
+        $data = ['title' => 'Welcome to HT-MVC Framework Home Page'];
         $this->view('pages/index', $data);
     }
 
