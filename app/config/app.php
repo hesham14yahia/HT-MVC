@@ -4,25 +4,25 @@
     define('APP_ROOT', dirname(dirname(__FILE__)));
 
     // url root
-    define('URL_ROOT', 'http://localhost/sites/htmvc/');
+    define('URL_ROOT', '_YOUR_URL_');
 
     // site name
-    define('SITE_NAME', 'HT-MVC');
+    define('SITE_NAME', '_YOUR_SITE_NAME_');
 
     // database
-    define('DB', 'mysql');
+    define('DB', '_YOUR_DATABASE_');
 
     // database host
     define('DB_HOST', 'localhost');
 
     // database name
-    define('DB_NAME', 'ht-mvc');
+    define('DB_NAME', '_YOUR_DATABASE_NAME_');
 
     // database user
-    define('DB_USER', 'root');
+    define('DB_USER', '_YOUR_DATABASE_USER_');
 
     // database password
-    define('DB_PASSWORD', '');
+    define('DB_PASSWORD', '_YOUR_DATABASE_PASSWORD_');
 
     // database attribute options
     define('DB_OPTIONS', [
